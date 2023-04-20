@@ -2,4 +2,11 @@
 main {
   margin: 25px auto;
   width: 50%;
+  justify-content: center;
+  display: grid;
+  gap: 5px;
+}
+
+.hidden {
+  display: none;
 }
