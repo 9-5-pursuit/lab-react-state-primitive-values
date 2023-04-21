@@ -1,11 +1,53 @@
 import React from "react";
+import react, {useState} from "react"
 import "./App.css";
 
 function App () {
+
+  const [counter, setCounter] = useState(0);
+  const [points, setPoints] = useState(1);
+
+   
+   function incrementByOne() {
+    setCounter(counter + points)
+   };
+    
+   function payPoints() {
+    if (counter >= 10){
+      setPoints(points + 1);
+      setCounter(counter - 10);
+    } else {
+      alert("You can't afford that!");
+    }
+
+   }
+
+   function resetGame() {
+    setCounter(0);
+    setPoints(1)
+   }
+
     return (
       <main>
-        <p>React State Lab</p>
+        {
+        
+        counter < 100 ? (
+        <>
+        <p>Current Score: {counter}</p>
+        <button onClick={incrementByOne}>+{points}</button>
+        <button onClick={payPoints}>Pay 10 points to change from +{points} to +{points + 1}</button>
+        </>
+        ) : ( 
+          <>
+          <h2>You Win!</h2>
+          <button onClick={resetGame}>Play again?</button>
+          </>
+        )
+        
+      }
+        
       </main>
+
     );
 }
 
