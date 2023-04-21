@@ -1,5 +1,27 @@
 /* Your code here! */
-main {
-  margin: 25px auto;
-  width: 50%;
+body {
+  background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+}
+.plusOne, .plusMore {
+  width: fit-content;
+  margin: auto;
+}
+
+.bigBtn {
+  color: white;
+}
+.score {
+  font-weight: bold;
+  padding-top: 10px;
+  margin: auto;
+  text-align: center;
+}
+
+.win {
+background: #00FF00;
+background: linear-gradient(to left, #00FF00 0%, #00FFFF 100%);
+border-radius: 10px;
+font-size: 30px;
+color: red;
+text-align: center;
 }
