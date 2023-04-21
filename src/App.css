@@ -3,3 +3,26 @@ main {
   margin: 25px auto;
   width: 50%;
 }
+
+.score-text {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.increment-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.increment-button {
+  font-size: 24px;
+  margin-bottom: 30px;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.pay-button {
+  font-size: 24px;
+  padding: 0;
+  border-radius: 10px;
+}
