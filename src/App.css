@@ -2,4 +2,36 @@
 main {
   margin: 25px auto;
   width: 50%;
+  text-align: center;
+}
+
+p:first-child {
+  text-align: center;
+  grid-column: 6;
+}
+
+.score {
+  grid-row: 6;
+  grid-column: 5;
+}
+
+div:first-child {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+}
+
+
+button:first-child {
+  max-width: 30px;
+  max-height: 30px;
+  grid-column: 6;
+  grid-row: 7;
+}
+
+button:nth-child(2) {
+  max-width: 100px;
+  max-height: 30px;
+  grid-column: 6;
+  grid-row: 8;
 }
