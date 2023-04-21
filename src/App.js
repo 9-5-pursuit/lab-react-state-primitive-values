@@ -39,7 +39,7 @@ function App () {
     else{
      
       setCurrentScore(currentScore-10);
-      setbutton_Plus10(`Pay 5 points to change from +${i+1} to +${j+1} `)
+      setbutton_Plus10(`Pay 10 points to change from +${i+1} to +${j+1} `)
       setbutton_Plus1(button_Plus1+1)
       set_i(i+1)
       set_j(j+1)
