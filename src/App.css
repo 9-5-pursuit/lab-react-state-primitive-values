@@ -3,3 +3,14 @@ main {
   margin: 25px auto;
   width: 50%;
 }
+
+.score-container {
+  text-align: center;
+}
+
+.increase-score-amount,
+.increase-button-amount,
+.winning-container {
+  text-align: center;
+  margin: 20px;
+}
