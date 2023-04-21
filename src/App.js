@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -24,27 +24,15 @@ function App() {
     setPoint(1);
   }
 
-  // useEffect(() => {
-  //   if (score % 2 !== 0) {
-  //     setScore(score + 12);
-  //     return;
-  //   }
-  // }, [score]);
-
   return (
     <main>
       {score < 100 ? (
-        // <>
-
         <div className="score-container">
           <h1>Current Score: {score}</h1>
           <div className="increase-score-amount">
             <button onClick={UpdateScorenum}>+{point}</button>
           </div>
-          {/* Adding a second button to increase score by 25 */}
-          {/* <div className="increase-score-amount">
-            <button onClick={() => setScore(score + 25)}>+25</button>
-          </div> */}
+
           <div className="increase-button-amount">
             <button onClick={updatePointNum}>
               Pay 10 points to change from +{point} to +{point + 1}
@@ -52,14 +40,10 @@ function App() {
           </div>
         </div>
       ) : (
-        // </>
-        // <>
         <div className="winning-container">
-          <h1>Current Score: {score}</h1>
           <h2>You Win!</h2>
           <button onClick={resetScore}>Play again?</button>
         </div>
-        // </>
       )}
     </main>
   );
