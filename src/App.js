@@ -12,10 +12,16 @@ function App () {
 
   }
   function handleIncrease(){
-    if(counter <= 10){
+    if(counter >= 10){
+      setIncrease(increase + 1)
+      setCounter(counter - 10)
 
     }
-    setIncrease(increase + 1)
+    else{
+      alert("You can't afford that!")
+    }
+    
+    
 
   }
     return (
@@ -23,7 +29,7 @@ function App () {
         <p>React State Lab</p>
         <h1>Counter Score: {counter}</h1>
         <button onClick={handleCounterAddOne}>+{increase}</button>
-        <button onClick={handleIncrease}>Pay 10 points to change from +{} to +{}</button>
+        <button onClick={handleIncrease}>Pay 10 points to change from +{increase} to +{increase + 1}</button>
         
       </main>
     );
