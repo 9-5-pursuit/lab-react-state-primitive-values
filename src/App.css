@@ -1,5 +1,15 @@
 /* Your code here! */
+
 main {
   margin: 25px auto;
   width: 50%;
+  text-align: center;
+}
+
+.inactive {
+  display: none;
+}
+
+.active {
+  display: block;
 }
