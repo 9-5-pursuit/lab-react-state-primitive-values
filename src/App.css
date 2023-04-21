@@ -1,5 +1,33 @@
 /* Your code here! */
+body {
+  background-color: mediumslateblue;
+  animation-name: lalala;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes lalala {
+  from {
+    background-color: mediumslateblue;
+  }
+  to {
+    background-color: purple;
+  }
+}
+
 main {
-  margin: 25px auto;
+  margin: 50px auto;
   width: 50%;
+  text-align: center;
+  background-color: mediumslateblue;
+  border-radius: 15px;
+}
+h1 {
+  color: rgb(248, 168, 70);
+}
+button {
+  padding: 20px;
+  background-color: rgb(248, 168, 70);
+  border: 5px solid rgb(255, 144, 0);
+  border-radius: 5rem;
 }
