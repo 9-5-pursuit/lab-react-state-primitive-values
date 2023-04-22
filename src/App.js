@@ -27,21 +27,17 @@ function App() {
   return (
     <main>
       {score < pointsToWin ? (
-        <>
+        <div className="buttons">
           <p>Current Score: {score}</p>
           <button onClick={clickCounter}>+{points}</button>
+          <br />
           <button onClick={levelUp}>
             Pay 10 points to change from +{points} to +{points + 1}
           </button>
-        </>
+        </div>
       ) : (
         <div>
-          <img
-            src="src/images/youwin.gif"
-            alt="winner"
-            width="500"
-            height="500"
-          />
+          <img src="youwin.gif" alt="winner" width="500" height="500" />
           <h2>You Win!</h2>
           <button onClick={reset}>Play again?</button>
         </div>
