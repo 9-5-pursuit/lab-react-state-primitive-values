@@ -3,3 +3,12 @@ main {
   margin: 25px auto;
   width: 50%;
 }
+
+#hideDiv {
+  background: red;
+  width: 400px;
+  margin: 0 auto;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
