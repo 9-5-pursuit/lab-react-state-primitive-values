@@ -12,9 +12,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "./node_modules/.bin/cypress open",
+    "test": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,5 +39,9 @@
     "cypress": "^9.7.0",
     "cypress-react-selector": "^2.3.11",
     "cypress-watch-and-reload": "^1.5.4"
-  }
+  },
+  "description": "Build a simple clicker \"game\" that makes use of React, props, and state!",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
