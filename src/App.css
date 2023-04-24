@@ -1,5 +1,31 @@
 /* Your code here! */
+body {
+  background-color: rgb(34, 55, 75);
+}
+
+p {
+  color: aliceblue;
+}
+
 main {
   margin: 25px auto;
   width: 50%;
+  display: grid;
+  gap: 5px;
+  justify-content: center;
+}
+/* 
+#hideDiv {
+  background: red;
+  width: 400px;
+  margin: 0 auto;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+} */
+
+.buttons {
+  margin: 10px;
+  gap: 20px;
+  justify-content: center;
 }
