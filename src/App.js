@@ -4,17 +4,17 @@ import "./App.css";
 
 function App () {
 
-  const [counter, setCounter] = useState(0)
+  const [currentScore, setcurrentScore] = useState(0)
   const [increase, setIncrease] = useState(1)
 
   function handleCounterAddOne(){
-    setCounter(counter + 1)
+    setcurrentScore(currentScore + increase)
 
   }
   function handleIncrease(){
-    if(counter >= 10){
+    if(currentScore >= 10){
       setIncrease(increase + 1)
-      setCounter(counter - 10)
+      setcurrentScore(currentScore - 10)
 
     }
     else{
@@ -27,7 +27,7 @@ function App () {
     return (
       <main>
         <p>React State Lab</p>
-        <h1>Counter Score: {counter}</h1>
+        <h1>Counter Score: {currentScore}</h1>
         <button onClick={handleCounterAddOne}>+{increase}</button>
         <button onClick={handleIncrease}>Pay 10 points to change from +{increase} to +{increase + 1}</button>
         
