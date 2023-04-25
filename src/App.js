@@ -1,43 +1,50 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./App.css";
 
-
 function App() {
-  
   const [counting, setCounting] = useState(0);
-  
+  const [increment, steIncrement] = useState(1);
 
-   function payingPoints() {
-     if (counting < 10) {
-       alert("You can't afford that!");
-     } else if (counting > 10) {
-       setCounting(counting - 10);
-     }
-   }
-  
-    function addScore() {
-      setCounting(counting + 1);
+  function addScore() {
+    setCounting(counting + increment);
+  }
+
+  function payingPoints() {
+    if (counting < 10) {
+      alert("You can't afford that!");
+    } else if (counting >= 10) {
+      setCounting(counting - 10);
+
+      steIncrement(increment + 1);
     }
- 
-    return (
-      <main>
-        <p>Current Score: {counting}</p>
+  }
 
-        <div>
+  function restScore() {
+    setCounting(0);
+    steIncrement(1);
+  }
+
+  return (
+    <main>
+      <p>Current Score: {counting}</p>
+
+      {counting < 100 ? (
+        <>
           <button className="play" onClick={() => addScore()}>
-            Click me to Play
+            +{increment}
           </button>
-        </div>
-
-        <div>
           <button className="payPoints" onClick={() => payingPoints()}>
-            Pay 10 points to change from +1 to +2
+            Pay 10 points to change from +{increment} to +{increment + 1}
           </button>
-        </div>
-
-
-      </main>
-    );
+        </>
+      ) : (
+        <>
+          <h2>You win!</h2>
+          <button onClick={restScore}>Play Again</button>
+        </>
+      )}
+    </main>
+  );
 }
 
-  export default App;
+export default App;
