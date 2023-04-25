@@ -12,35 +12,33 @@ function App() {
   function payingPoints() {
     if (counting < 10) {
       alert("You can't afford that!");
-    } else if (counting >= 10) {
+    }
+    else if (counting >= 10) {
       setCounting(counting - 10);
 
       steIncrement(increment + 1);
     }
   }
 
-  function restScore() {
+  function resetGame() {
     setCounting(0);
     steIncrement(1);
   }
 
   return (
     <main>
-      <h2>Current Score: {counting}</h2>
-
       {counting < 100 ? (
         <>
-          <button className="play" onClick={() => addScore()}>
-            +{increment}
-          </button>
-          <button className="payPoints" onClick={() => payingPoints()}>
+          <h2>Current Score: {counting}</h2>
+          <button onClick={addScore}>+{increment}</button>
+          <button onClick={payingPoints}>
             Pay 10 points to change from +{increment} to +{increment + 1}
           </button>
         </>
       ) : (
         <>
-          <h2>You win!</h2>
-          <button onClick={restScore}>Play Again</button>
+          <h2>'You Win!'</h2>
+          <button onClick={resetGame}>Play again?</button>
         </>
       )}
     </main>
