@@ -26,7 +26,7 @@ function App() {
 
   return (
     <main>
-      <p>Current Score: {counting}</p>
+      <h2>Current Score: {counting}</h2>
 
       {counting < 100 ? (
         <>
