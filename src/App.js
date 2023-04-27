@@ -19,7 +19,7 @@ function App() {
       setIncrease(increase + cost); //Changes the increment by new value
       setCost(cost + 1); // increases the cost by 1
     } else {
-      alert("You can't affor this");
+      alert("You can't afford this");
     }
   }
   function checkWin() {
