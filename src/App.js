@@ -2,48 +2,50 @@ import React from "react";
 import { useState } from "react";
 import "./App.css";
 
-function App () {
 
-  const [currentScore, setcurrentScore] = useState(0)
-  const [increase, setIncrease] = useState(1)
+function App() {
+  const [counting, setCounting] = useState(0);
+  const [increment, steIncrement] = useState(1);
 
-  function handleCounterAddOne(){
-    setcurrentScore(currentScore + increase)
-
+  function updateCurrentScore() {
+    setCounting(counting + increment);
   }
-  function handleIncrease(){
-    //anther way to do it with less code
-    //if(counting < 10) return alert("You can't afford that!")
-    if(currentScore >= 10){
-      setIncrease(increase + 1)
-      setcurrentScore(currentScore - 10)
+
+  function payingPoints() {
+    if (counting < 10) {
+      alert("You can't afford that!");
     }
-    else{
-      alert("You can't afford that!")
+    else if (counting >= 10) {
+      //removes 10 points from score
+      setCounting(counting - 10);
+      //adds one to the number that adds
+      steIncrement(increment + 1);
     }
   }
 
-  function reset(){
-    setcurrentScore(0)
-    setIncrease(1)
+  function resetGame() {
+    setCounting(0);
+    steIncrement(1);
   }
-    return (
-      <main>
-        {currentScore < 100? (
-          <>
-        <p>React State Lab</p>
-        <h1>Counter Score: {currentScore}</h1>
-        <button onClick={handleCounterAddOne}>+{increase}</button>
-        <button onClick={handleIncrease}>Pay 10 points to change from +{increase} to +{increase + 1}</button>
+
+  return (
+    <main>
+      {counting < 100 ? (
+        <>
+          <h2>Current Score: {counting}</h2>
+          <button onClick={updateCurrentScore}>+{increment}</button>
+          <button onClick={payingPoints}>
+            Pay 10 points to change from +{increment} to +{increment + 1}
+          </button>
         </>
-        ) : (
-          <>
-        <h2>You Win!</h2>
-        <button onClick={reset}>Play again?</button>
+      ) : (
+        <>
+          <h2>'You Win!'</h2>
+          <button onClick={resetGame}>Play again?</button>
         </>
-        )}
-      </main>
-    );
+      )}
+    </main>
+  );
 }
 
 export default App;
