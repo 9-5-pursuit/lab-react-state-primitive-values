@@ -12,8 +12,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+    "build": "react-scripts build --openssl-legacy-provider",
+    "start": "react-scripts start --openssl-legacy-provider",
     "test": "./node_modules/.bin/cypress open",
     "eject": "react-scripts eject"
   },
