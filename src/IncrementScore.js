@@ -1,4 +1,18 @@
-// IncrementScore.js
+// // scoreFunctions.js
+
+// export function incrementScore(currentScore, incrementValue) {
+//     return currentScore + incrementValue;
+//   }
+  
+//   export function increaseIncrementValue(currentScore, incrementValue) {
+//     if (currentScore >= 10) {
+//       return { newScore: currentScore - 10, newIncrementValue: incrementValue + 1 };
+//     } else {
+//       return null;
+//     }
+//   }
+  
+  // IncrementScore.js
 import React, { useState } from "react";
 import { incrementScore, increaseIncrementValue } from "./scoreFunctions";
 import "./IncrementScore.css";
@@ -38,5 +52,3 @@ function IncrementScore() {
 }
 
 export default IncrementScore;
-
-
